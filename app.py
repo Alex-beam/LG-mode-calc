@@ -63,3 +63,6 @@ if p > 0:
     st.write(s)
 else:
     st.write(f"Not found")
+
+st.sidebar.write(""" Source code is located [here](https://github.com/Alex-beam/LG-mode-calc).   
+    Contact me by [email](mailto:akorom@mail.ru).""")
