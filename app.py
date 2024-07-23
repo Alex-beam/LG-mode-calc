@@ -46,11 +46,11 @@ df = pd.DataFrame(data, columns = ['x', 'y'])
 st.line_chart(df, x = 'x', x_label = 'r, um', y_label = 'Intensity')
 
 # Finding local maxima
-st.write(f"Local Maxima for {p = } in",  r"$\mu m$:")
+st.write(f"Approximations of local Maxima for {p = } in",  r"$\mu m$:")
 if p > 0:
     i_max = argrelextrema(LG_pl,np.greater)
     r_max = [r[i] for i in i_max]
-    s = "; ".join([str(np.round(x*1e6, 1)) for x in r_max[0]])  
+    s = "; ".join([str(np.round(x*1e6, 0)) for x in r_max[0]])  
     st.write(s)
 else:
     st.write(f"Not found")
